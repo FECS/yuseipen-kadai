@@ -3,7 +3,9 @@ package com.example.fecstask;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -86,6 +88,14 @@ public class MainActivity extends Activity implements OnClickListener{
     public void displayToast(){
     	EditText input = (EditText) findViewById(R.id.String_inputer);
     	Toast.makeText(this, input.getText(), Toast.LENGTH_SHORT).show();
+    	
+    	Uri uri = Uri.parse(input.getText().toString());
+    	Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+    	try{
+    		startActivity(intent);
+    	}catch(ActivityNotFoundException e){
+    		Toast.makeText(this, "input URL", Toast.LENGTH_SHORT).show();
+    	}
     }
 
 }
