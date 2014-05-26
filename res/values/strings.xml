@@ -5,6 +5,6 @@
     <string name="action_settings">Settings</string>
     <string name="Google_button_text">Go Google</string>
     <string name="title_activity_browse">BrowseActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="String_inputer_hint">Input String</string>
 
 </resources>

@@ -15,5 +15,14 @@
         android:layout_centerInParent="true"
         android:text="@string/Google_button_text"
         android:onClick="onClick" />
+    
+    <EditText
+        android:id="@+id/String_inputer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Google_button"
+        android:hint="@string/String_inputer_hint"
+        android:inputType="text"
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>

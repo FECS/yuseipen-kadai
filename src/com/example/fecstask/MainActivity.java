@@ -10,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 import android.os.Build;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener{
 
 	private static final String TAG = "MainActivity";
 	
@@ -74,6 +77,11 @@ public class MainActivity extends Activity {
     		startActivity(intent);
     		break;
     	}
+    }
+    
+    public void displayToast(){
+    	EditText input = (EditText) findViewById(R.id.String_inputer);
+    	Toast.makeText(this, input.getText(), Toast.LENGTH_SHORT).show();
     }
 
 }

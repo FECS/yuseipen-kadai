@@ -27,6 +27,7 @@ public class BrowseActivity extends Activity {
 				return super.shouldOverrideUrlLoading(view, url);
 				}
 			});
+
 		wv.loadUrl("http://www.google.com/");
 		setContentView(wv);
 	}
