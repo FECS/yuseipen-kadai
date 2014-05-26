@@ -76,6 +76,10 @@ public class MainActivity extends Activity implements OnClickListener{
     		Intent intent = new Intent(this, BrowseActivity.class);
     		startActivity(intent);
     		break;
+    	case R.id.out_of_switch:
+    		Log.i(TAG, "Screen Pressed");
+    		displayToast();
+    		break;
     	}
     }
     
